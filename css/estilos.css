@@ -1,0 +1,246 @@
+@charset "utf-8";
+html, body{
+	background: #02010a;
+	font-family: 'Dancing Script';
+	margin:0;
+}
+
+/* Tamaño del documento HTML */
+.contenido{
+	width:900px;
+	padding:25px;
+	margin:0 auto;
+	position:relative;
+	top: 0px;
+	animation-duration: 1s;
+	animation-name: animacion;
+	
+}
+
+/*Cabecera */
+.cabecera{
+	background-color:#5b7989;
+	padding:20px;
+	border-top-right-radius:10px;
+	border-top-left-radius:10px;
+}
+.titulo{
+	display:inline-block;
+	font-size:25px;
+	text-shadow:0 2px 2px #02010a;
+	color: #fff;
+}
+
+.menu{
+	display:inline-block;
+	list-style:none;
+	float:right;
+	margin:0;
+}
+.menu li{
+	display:inline-block;
+	padding: 8px 15px;
+}
+
+.menu li a{
+	color: #FFF;
+	text-shadow:0 2px 2px #02010a;
+}
+
+/* Sombra a la imagen*/
+.shadow {
+	box-shadow: 2px 2px 0px #02010a;
+}
+
+/*Imagen Central */
+.imagen_central{
+	padding:20px;
+	align-items: center;
+	background-color:  #82c3a6;
+	display: flex;
+}
+img.responsive {
+	width: 600px;
+	margin: 0 auto;
+	transition: .4s;
+}
+
+/*Imagen Secundario */
+.imagen_secundario{
+	padding: 30px;
+    background-color: #d5c75f;
+    border: 1px solid #CCC;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.imagen_secundario img.responsive {
+	width: 300px;
+	margin: 0 auto;
+	height: 200px;
+    margin: 15px;	
+}
+
+.imagen_secundario div {
+	text-align: center;
+}
+.imagen_secundario div a{
+	color:black;
+}
+
+
+/*Rotacion a lado izquierda */
+.rotate {
+	transition: .5s;
+}
+
+/*Pasar mouse sobre la imagen izquierda, para ver efecto */
+.rotate:hover {
+	transform: rotate(10deg);
+	transform: drop-shadow(16px 16px 10px #82c3a6);
+	border: 2px solid #FFF;
+}
+
+/*Traslacion a lado derecho */
+.trasnlate {
+	transition: .5s;
+}
+
+/*Pasar mouse sobre la imagen derecho, para ver efecto */
+.trasnlate:hover {
+	transform: translate(20px, -5px);
+	transform: drop-shadow(16px 16px 10px #82c3a6);
+	border: 2px solid #FFF;
+}
+
+
+/*Pie de Página*/
+.pie{
+	clear:both;
+	background-color:#C6d5c5;
+	border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+	padding:20px;
+}
+.columna {
+	width: 20%;
+	padding: 15px;
+	display: inline-block;
+	vertical-align: text-top;
+}
+
+.pie ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.pie img {
+	width: 20px;
+    vertical-align: middle;
+}
+.pie li{
+  line-height: 32px;
+}
+
+
+
+/*Galeria para imagenes de paisajes.html*/
+
+.imagen_galeria {
+    padding: 30px;
+    background-color: #d5c75f;
+}
+
+.imagen_galeria img.responsive {
+    width: 33%;
+}
+
+.blur {
+	filter: blur(10px); 
+}
+
+.grayscale {
+	filter: grayscale(100%)
+}
+
+.sepia {
+	filter: sepia(90%)
+}
+
+
+
+/* Queries para tamaños de dispositivos*/
+
+@media (max-width: 900px) {
+	.contenido {
+		width: 95%;
+		padding: 16px;
+	}
+	
+	.imagen_central {
+	    width: calc(100% - 32px);
+		padding: 16px;
+	}
+
+	.imagen_secundario {
+	    height: auto;
+	    padding: 16px;
+	    flex-direction: column;
+	    align-items: center;
+	}
+
+	img.responsive {
+	    width: calc(100% - 32px);
+	    height: auto;
+	}
+	.imagen_secundario img.responsive {
+	    width: calc(100% - 32px);
+	    height: auto;
+	}
+	
+	.imagen_galeria img.responsive {
+	    width: 100%;
+	}
+
+	.columna {
+	    width: calc(100% - 32px);
+	}
+
+	.cabecera{
+	    display: flex;
+	    align-items: center;
+	    flex-direction: column;
+	}
+
+	.titulo {
+		font-size: 25px;
+		text-align:center;
+	}
+}
+
+/*Movil - Animacion para venir desde abajo hacia arriba y luego rebotar*/
+@keyframes animacion{
+	0% {
+		margin-top:150%;
+	}
+    60% {
+		margin-top: -5%;
+	}
+	100%{
+		margin-top: 0%;
+	}
+}
+
+
+
+
+
+
+
+
+
